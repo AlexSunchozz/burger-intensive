@@ -1,0 +1,89 @@
+@import 'nullstyle.scss';
+
+//--------------------------------------------------Шрифты-------------------------------------------//
+
+@font-face {
+    font-family: 'Girloy';
+    src: url('../asset/fonts/Gilroy-Semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../asset/fonts/Merriweather-Black.ttf');
+}
+
+//--------------------------------------------------Общие стили-------------------------------------------//
+
+body{
+    height: 100%;
+    background-color: #191411;
+    font-family: 'Girloy', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #FFF;
+}
+
+body.lock{overflow: hidden;}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0px 40px;
+    @media (max-width:1200px){padding: 0px 40px;}
+    @media (max-width:600px){padding: 0px 20px;}
+    box-sizing: content-box;
+}
+
+._ibg{
+    position: relative;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+.main{
+    flex: 1 1 auto;
+    position: relative;
+    background-image: url('../asset/img/main_bg\ \(1\).png');
+    background-position: top center;
+}
+
+.button {
+    color: #191411;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    width: 260px;
+    box-sizing: border-box;
+    min-height: 62px;
+    padding: 19px 50px;
+    border-radius: 8px;
+    background: linear-gradient(96deg, #DA8023 0%, #E2B438 100%);
+}
+
+.button:hover {
+    background: linear-gradient(96deg, #ac6115 0%, #9e7a19 100%);
+}
+//--------------------------------------------------Контент-------------------------------------------//
+
+@import 'header.scss';
+@import 'showcase.scss'
+
